@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Virtual Piano</title>
+</head>
+<body onload="recordedView()">
+  <header>
+    <h1>VIRTUAL PIANO</h1>
+  </header>
+
+  <main>
+    <div id="piano">
+      <div class="key white-key" data-name="c3"></div>
+      <div class="key black-key" data-name="ch3"></div>
+      <div class="key white-key" data-name="d3"></div>
+      <div class="key black-key" data-name="dh3"></div>
+      <div class="key white-key" data-name="e3"></div>
+      <div class="key white-key" data-name="f3"></div>
+      <div class="key black-key" data-name="fh3"></div>
+      <div class="key white-key" data-name="g3"></div>
+      <div class="key black-key" data-name="gh3"></div>
+      <div class="key white-key" data-name="a3"></div>
+      <div class="key black-key" data-name="ah3"></div>
+      <div class="key white-key" data-name="b3"></div>
+
+      <div class="key white-key" data-name="c4"></div>
+      <div class="key black-key" data-name="ch4"></div>
+      <div class="key white-key" data-name="d4"></div>
+      <div class="key black-key" data-name="dh4"></div>
+      <div class="key white-key" data-name="e4"></div>
+      <div class="key white-key" data-name="f4"></div>
+      <div class="key black-key" data-name="fh4"></div>
+      <div class="key white-key" data-name="g4"></div>
+      <div class="key black-key" data-name="gh4"></div>
+      <div class="key white-key" data-name="a4"></div>
+      <div class="key black-key" data-name="ah4"></div>
+      <div class="key white-key" data-name="b4"></div>
+
+    </div>
+    <div>
+      <br>
+      <p>Use the "tab" -> "\" keys for white notes</p>
+      <p>And "1" -> "backspace" keys for black notes (except "3", "7", "0")</p>
+    </div>
+    <div id="record-and-play">
+      <br>
+      <!-- record button -->
+      <button type="button" id="record">Record</button>
+      <button type="button" id="stop" class="active">Stop</button>
+      <!-- save input -->
+      <form id='form'>
+        <button type="button" id="save" >Save</button>
+        <button type="button" id="play" class="play">Play</button>
+
+      </form>
+      <div id="modal">
+        <div>
+          <label>Name your new record:</label>
+          <br>
+          <input type="text" id="input">
+          <br>
+          <button type="button" id="ok" >OK</button>
+          <button type="button" id="cancel" >Cancel</button>
+        </div>
+      </div>
+      <!-- records display -->
+      <div id="recored-display">
+        <label>Recorded files:</label>
+        <br>
+        <select id="recorded-list">
+          <option value="">----------Chose your saved records----------</option>
+        </select>
+        <button type="button" id="recorded-play" class="play">Play</button>
+        <button type="button" id="delete">Delete</button>
+      </div>
+    </div>
+    <audio id="c3" src="./notes/tedagame__3c.ogg"></audio>
+    <audio id="ch3" src="./notes/tedagame__3ch.ogg"></audio>
+    <audio id="d3" src="./notes/tedagame__3d.ogg"></audio>
+    <audio id="dh3" src="./notes/tedagame__3dh.ogg"></audio>
+    <audio id="e3" src="./notes/tedagame__3e.ogg"></audio>
+    <audio id="f3" src="./notes/tedagame__3f.ogg"></audio>
+    <audio id="fh3" src="./notes/tedagame__3fh.ogg"></audio>
+    <audio id="g3" src="./notes/tedagame__3g.ogg"></audio>
+    <audio id="gh3" src="./notes/tedagame__3gh.ogg"></audio>
+    <audio id="a3" src="./notes/tedagame__3a.ogg"></audio>
+    <audio id="ah3" src="./notes/tedagame__3ah.ogg"></audio>
+    <audio id="b3" src="./notes/tedagame__3b.ogg"></audio>
+
+    <audio id="c4" src="./notes/tedagame__4c.ogg"></audio>
+    <audio id="ch4" src="./notes/tedagame__4ch.ogg"></audio>
+    <audio id="d4" src="./notes/tedagame__4d.ogg"></audio>
+    <audio id="dh4" src="./notes/tedagame__4dh.ogg"></audio>
+    <audio id="e4" src="./notes/tedagame__4e.ogg"></audio>
+    <audio id="f4" src="./notes/tedagame__4f.ogg"></audio>
+    <audio id="fh4" src="./notes/tedagame__4fh.ogg"></audio>
+    <audio id="g4" src="./notes/tedagame__4g.ogg"></audio>
+    <audio id="gh4" src="./notes/tedagame__4gh.ogg"></audio>
+    <audio id="a4" src="./notes/tedagame__4a.ogg"></audio>
+    <audio id="ah4" src="./notes/tedagame__4ah.ogg"></audio>
+    <audio id="b4" src="./notes/tedagame__4b.ogg"></audio>
+  </main>
+  <footer>
+
+    <p>Source code: <a href="https://github.com/sax1476/Virtual-Piano/" style="text-decoration: none; color: #CCC">https://github.com/sax1476/Virtual-Piano/</a></p>
+    <p>Notes sample: TEDAgame (at https://freesound.org/people/TEDAgame/packs/25405/ )</p>
+    <p>P/s: All of your records will be save to the browser's local storage</p>
+  </footer>
+
+
+  <script src="/script.js" charset="utf-8"></script>
+</body>
+</html>
